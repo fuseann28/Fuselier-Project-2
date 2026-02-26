@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Whisk & Giggle</title>
+  <meta name="description" content="This site will serve as the hub for many sub responsive layouts">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="./img/logo.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Style+Script&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <img src="./img/logo.png" alt="Whisk & Giggle Logo">
+
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Menu</a></li>
+            <a href="#order">Order</a>
+            
+
+        </ul>
+    </nav>
+</header>
+
+<body>
+  <div class="hero">
+    <h1>Freshly Baked Happiness</h1>
+    <p>Cupcakes and cakes made daily!</p>
+    <a href="#order">Order Now</a>
+</div>
+
+<div id="features">
+    <h2>Our Menu</h2>
+
+
+<div class="items">
+    <div class="card">
+        <img src="./img/cakeslice.jpg" alt="">
+        <h3>Cakes</h3>
+        <p>Custom cakes baked fresh with soft layers and pastel frosting.</p>
+
+        <div class="details">
+            <p>Sizes: 6", 8", 10"</p>
+            <p>Tiers: 1-3 tiers</p>
+            <p>Price: Starting at $35</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./img/cupcake.jpg" alt="">
+        <h3>Cupcakes</h3>
+        <p>Perfectly sweet cupcakes topped with creamy swirls and sprinkles.</p>
+
+        <div class="details">
+            <p>Amounts: 6, 12, 24 pack</p>
+            <p>Price: Starting at $12</p>
+        </div>
+    </div>
+</div>
+
+<div class="flavors">
+    <h2>Flavors We Offer</h2>
+
+    <div class="flavor-list">
+        <div>Vanilla</div>
+        <div>Chocolate</div>
+        <div>Strawberry</div>
+        <div>Red Velvet</div>
+        <div>Lemon</div>
+        <div>Funfetti</div>
+    </div>
+</div>
+
+<!-- ORDER SECTION -->
+<div id="order" class="order">
+    <h2>Place an Order</h2>
+
+    <form id="orderForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="item">What are you ordering?</label>
+        <select id="item" required>
+            <option value="">Select an option</option>
+            <option value="cake">Cake</option>
+            <option value="cupcakes">Cupcakes</option>
+        </select>
+
+        <label for="details">Order Details</label>
+        <textarea id="details" rows="4" placeholder="Cake size, tiers, cupcake amount, flavors…" required></textarea>
+
+        <button type="submit" class="orderbtn">Submit Order</button>
+    </form>
+</div>
+
+
+  
+  <script src="js/main.js"></script>
+</body>
+
+</html>
