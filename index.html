@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Whisk & Giggle</title>
-  <meta name="description" content="This site will serve as the hub for many sub responsive layouts">
+  <meta name="description" content="This is a website to order cakes and cupcakes from Whisk and Giggle Bakery">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:title" content="">
@@ -21,102 +21,110 @@
 
   <meta name="theme-color" content="#fafafa">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Style+Script&display=swap" rel="stylesheet">
-</head>
-
-<header>
-    <img src="./img/logo.png" alt="Whisk & Giggle Logo">
-
-    <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#features">Menu</a></li>
-            <a href="#order">Order</a>
-            
-
-        </ul>
-    </nav>
-</header>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
 
 <body>
-  <div class="hero">
-    <h1>Freshly Baked Happiness</h1>
-    <p>Cupcakes and cakes made daily!</p>
-    <a href="#order">Order Now</a>
-</div>
 
-<div id="features">
-    <h2>Our Menu</h2>
+    <!-- HEADER -->
+    <header>
+        <img src="./img/logo.png" alt="Whisk & Giggle Logo">
 
+        <nav>
+            <ul>
+                <li><a href="#features">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="items">
-    <div class="card">
-        <img src="./img/cakeslice.jpg" alt="">
-        <h3>Cakes</h3>
-        <p>Custom cakes baked fresh with soft layers and pastel frosting.</p>
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Freshly Baked Happiness</h1>
+        <p>Cupcakes and cakes made daily!</p>
+        <a href="#order">Order Now</a>
+    </div>
 
-        <div class="details">
-            <p>Sizes: 6", 8", 10"</p>
-            <p>Tiers: 1-3 tiers</p>
-            <p>Price: Starting at $35</p>
+    <!-- menu -->
+    <section id="features">
+        <h2>Our Menu</h2>
+
+        <div class="items">
+
+            <!-- cake card -->
+            <div class="card">
+                <img src="./img/cakeslice.jpg" alt="Cake Slice">
+                <h3>Cakes</h3>
+                <p>Custom cakes baked fresh with soft layers and pastel frosting.</p>
+
+                <div class="details">
+                    <p>Sizes: 6", 8", 10"</p>
+                    <p>Tiers: 1-3 tiers</p>
+                    <p>Price: Starting at $35</p>
+                </div>
+            </div>
+
+            <!-- cupcake card -->
+            <div class="card">
+                <img src="./img/cupcake.jpg" alt="Cupcake">
+                <h3>Cupcakes</h3>
+                <p>Perfectly sweet cupcakes topped with creamy swirls and sprinkles.</p>
+
+                <div class="details">
+                    <p>Amounts: 6, 12, 24 pack</p>
+                    <p>Price: Starting at $12</p>
+                </div>
+            </div>
+
         </div>
-    </div>
+    </section>
 
-    <div class="card">
-        <img src="./img/cupcake.jpg" alt="">
-        <h3>Cupcakes</h3>
-        <p>Perfectly sweet cupcakes topped with creamy swirls and sprinkles.</p>
+    <!-- flavors-->
+    <section class="flavors">
+        <h2>Flavors We Offer</h2>
 
-        <div class="details">
-            <p>Amounts: 6, 12, 24 pack</p>
-            <p>Price: Starting at $12</p>
+        <div class="flavor-list">
+            <div>Vanilla</div>
+            <div>Chocolate</div>
+            <div>Strawberry</div>
+            <div>Red Velvet</div>
+            <div>Lemon</div>
+            <div>Funfetti</div>
         </div>
-    </div>
-</div>
+    </section>
 
-<div class="flavors">
-    <h2>Flavors We Offer</h2>
+    <!-- ORDER SECTION -->
+    <section id="order" class="order">
+        <h2>Place an Order</h2>
 
-    <div class="flavor-list">
-        <div>Vanilla</div>
-        <div>Chocolate</div>
-        <div>Strawberry</div>
-        <div>Red Velvet</div>
-        <div>Lemon</div>
-        <div>Funfetti</div>
-    </div>
-</div>
+        <form id="orderForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
 
-<!-- ORDER SECTION -->
-<div id="order" class="order">
-    <h2>Place an Order</h2>
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
 
-    <form id="orderForm">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" required>
+            <label for="item">What are you ordering?</label>
+            <select id="item" required>
+                <option value="">Select an option</option>
+                <option value="cake">Cake</option>
+                <option value="cupcakes">Cupcakes</option>
+            </select>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
+            <label for="details">Order Details</label>
+            <textarea id="details" rows="4" placeholder="Cake size, tiers, cupcake amount, flavors…" required></textarea>
 
-        <label for="item">What are you ordering?</label>
-        <select id="item" required>
-            <option value="">Select an option</option>
-            <option value="cake">Cake</option>
-            <option value="cupcakes">Cupcakes</option>
-        </select>
+            <button type="submit" class="orderbtn">Submit Order</button>
+        </form>
+    </section>
 
-        <label for="details">Order Details</label>
-        <textarea id="details" rows="4" placeholder="Cake size, tiers, cupcake amount, flavors…" required></textarea>
+    <!-- footer -->
+    <footer>
+        <img src="./img/logo.png" alt="Whisk & Giggle Logo" class="footer-logo">
+        <p>Baked with love at Whisk & Giggle Bakery</p>
+    </footer>
 
-        <button type="submit" class="orderbtn">Submit Order</button>
-    </form>
-</div>
+    <script src="js/main.js"></script>
 
-
-  
-  <script src="js/main.js"></script>
 </body>
-
-</html>
