@@ -24,81 +24,75 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
-
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <img src="./img/logo.png" alt="Whisk & Giggle Logo">
+      <header class="header">
+        <img src="./img/logo.png" alt="Whisk & Giggle Bakery logo" class="logo">
 
-        <nav>
-            <ul>
+        <nav class="nav">
+            <ul class="nav-list">
                 <li><a href="#features">Menu</a></li>
                 <li><a href="#order">Order</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- HERO -->
-    <div class="hero">
-        <h1>Freshly Baked Happiness</h1>
-        <p>Cupcakes and cakes made daily!</p>
-        <a href="#order">Order Now</a>
-    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Freshly Baked Happiness</h1>
+            <p class="hero-sub">Cupcakes and cakes made daily</p>
+            <a href="#order" class="btn">Order Now</a>
+        </div>
+    </section>
 
-    <!-- menu -->
-    <section id="features">
-        <h2>Our Menu</h2>
+    <section id="features" class="menu">
+        <h2 class="section-title">Our Menu</h2>
 
         <div class="items">
 
-            <!-- cake card -->
-            <div class="card">
-                <img src="./img/cakeslice.jpg" alt="Cake Slice">
-                <h3>Cakes</h3>
-                <p>Custom cakes baked fresh with soft layers and pastel frosting.</p>
+            <article class="card">
+                <img src="./img/cakeslice.jpg" alt="Slice of cake" class="card-img">
+                <h3 class="card-title">Cakes</h3>
+                <p class="card-desc">Custom cakes baked fresh with soft layers and pastel frosting.</p>
 
                 <div class="details">
                     <p>Sizes: 6", 8", 10"</p>
-                    <p>Tiers: 1-3 tiers</p>
+                    <p>Tiers: 1–3 tiers</p>
                     <p>Price: Starting at $35</p>
                 </div>
-            </div>
+            </article>
 
-            <!-- cupcake card -->
-            <div class="card">
-                <img src="./img/cupcake.jpg" alt="Cupcake">
-                <h3>Cupcakes</h3>
-                <p>Perfectly sweet cupcakes topped with creamy swirls and sprinkles.</p>
+            <article class="card">
+                <img src="./img/cupcake.jpg" alt="Cupcake" class="card-img">
+                <h3 class="card-title">Cupcakes</h3>
+                <p class="card-desc">Perfectly sweet cupcakes topped with creamy swirls and sprinkles.</p>
 
                 <div class="details">
                     <p>Amounts: 6, 12, 24 pack</p>
                     <p>Price: Starting at $12</p>
                 </div>
-            </div>
+            </article>
 
         </div>
     </section>
 
-    <!-- flavors-->
     <section class="flavors">
-        <h2>Flavors We Offer</h2>
+        <h2 class="section-title">Flavors We Offer</h2>
 
         <div class="flavor-list">
-            <div>Vanilla</div>
-            <div>Chocolate</div>
-            <div>Strawberry</div>
-            <div>Red Velvet</div>
-            <div>Lemon</div>
-            <div>Funfetti</div>
+            <span data-taste="Light, sweet, classic" data-color="#f7e7c6">Vanilla</span>
+            <span data-taste="Rich and smooth" data-color="#d8b4a0">Chocolate</span>
+            <span data-taste="Fresh and fruity" data-color="#ffc4d0">Strawberry</span>
+            <span data-taste="Velvety cocoa with tangy cream cheese" data-color="#e3c7dd">Red Velvet</span>
+            <span data-taste="Bright and citrusy" data-color="#fff7a8">Lemon</span>
+            <span data-taste="Sweet vanilla with rainbow sprinkles" data-color="#e8e4ff">Funfetti</span>
         </div>
     </section>
 
-    <!-- order -->
     <section id="order" class="order">
-        <h2>Place an Order</h2>
+        <h2 class="section-title">Place an Order</h2>
 
-        <form id="orderForm">
+        <form id="orderForm" class="form">
             <label for="name">Full Name</label>
             <input type="text" id="name" required>
 
@@ -115,17 +109,21 @@
             <label for="details">Order Details</label>
             <textarea id="details" rows="4" placeholder="Cake size, tiers, cupcake amount, flavors…" required></textarea>
 
-            <button type="submit" class="orderbtn">Submit Order</button>
+            <button type="submit" class="btn">Submit Order</button>
         </form>
     </section>
 
-    <!-- footer -->
-     <div class="footer">
-        <footer>
-            <img src="./img/logo.png" alt="Whisk & Giggle Logo" class="footer-logo">
-            <p>Baked with love at Whisk & Giggle Bakery</p>
-        </footer>
-    </div>
-    <script src="js/main.js"></script>
+    <footer class="footer">
+        <img src="./img/logo.png" alt="Whisk & Giggle Bakery logo" class="footer-logo">
+        <p>Baked with love at Whisk & Giggle Bakery</p>
+    </footer>
+
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Thank you! Your order has been submitted.");
+            e.target.reset();
+        });
+    </script>
 
 </body>

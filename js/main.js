@@ -1,7 +1,6 @@
 // JS scripts placed here
-document.getElementById("orderForm").addEventListener("submit", function(e) {
+document.getElementById("orderForm").addEventListener("submit", (e) => {
     e.preventDefault();
     alert("Thank you! Your order has been submitted.");
-    this.reset();
+    e.target.reset();
 });
-
